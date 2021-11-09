@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.body-section {
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+}
+
+.header {
+    width: 100%;
+    height: 8vh;
+    background-color: #F46226;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.main-container {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    height: 84vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 2rem;
+}
+
+.vedio-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.2rem;
+    width: 100%;
+    height: 70%;
+    background: #2D343F;
+    color: white;
+    border-radius: 15px;
+}
+
+.vedio-section iframe {
+    border-radius: 15px;
+}
+
+.btn-section {
+    margin-top: 1rem;
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+}
+
+.btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-1, .btn-2, .btn-3, .btn-4 {
+    margin-right: 2rem;
+    border: transparent;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-container .btn-4 {
+    margin-right: 0;
+}
+
+.btn-container .btn-1, .btn-container .btn-2 {
+    background-color: #82B540;
+}
+
+.btn-container .btn-3, .btn-container .btn-4 {
+    background-color: #0A83B5;
+}
+
+.top-btn, .bottom-btn {
+    display: flex;
+    justify-content: space-between;
+    width: 41%;
+}
+
+.icon {
+    cursor: pointer;
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem;
+}
+
+.icon svg {
+    width: 7em;
+    height: 7em;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    margin-top: 1rem;
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0A83B5;
+    color: white;
+    font-size: 1.2rem;
+}
+
+@media only screen and (max-width:1280px) {
+    .top-btn, .bottom-btn{
+        width: 42%;
+    }
+}
+
+@media only screen and (max-width:1180px) {
+    .top-btn, .bottom-btn{
+        width: 44%; 
+    }
+}
+
+@media only screen and (max-width:1024px) {
+    .header, .footer {
+        height: 7vh;
+        font-size: 1.5rem;
+    }
+    .btn-container {
+        flex-direction: column;
+    }
+    .btn-container .btn-2 {
+        margin-right: 0;
+    }
+    .top-btn {
+        margin-bottom: 2rem;
+    }
+    .top-btn, .bottom-btn {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .header h1, .footer h2 {
+        font-size: 1.4rem;
+    }
+    .vedio-section {
+        height: 60%;
+    }
+    .btn-section {
+        height: 40%;
+    }
+}
+
+@media only screen and (max-width:540px) {
+    .header h1, .footer h2 {
+        font-size: 1.4rem;
+    }
+    .icon svg {
+        width: 5.5em;
+        height: 5.5em;
+    }
+    .main-container {
+        padding: 0 1.5rem;
+    }
+}
+
+@media only screen and (max-width:411px) {
+    .header h1, .footer h2 {
+        font-size: 1.2rem;
+    }
+    .top-btn {
+        margin-bottom: 1rem;
+    }
+    .vedio-section {
+        margin-top: 1rem;
+    }
+}
+
+@media only screen and (max-width:360px) {
+    .vedio-section, .btn-section {
+        height: 50%;
+    }
+}
+
+@media only screen and (max-width:320px) {
+    .main-container {
+        padding: 0 .8rem;
+    }
+    .icon svg {
+        width: 5em;
+        height: 5em;
+    }
+}
+
+@media only screen and (max-width:280px) {
+    .main-container {
+        padding: 0 .6rem;
+    }
+    .vedio-section {
+        height: 55%;
+    }
+    .btn-section {
+        height: 45%;
+    }
+}
