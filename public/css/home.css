@@ -9,6 +9,7 @@
     width: 100vw;
     height: 100vh;
     max-width: 100%;
+    max-height: 100%;
 }
 
 .header {
@@ -19,13 +20,13 @@
     align-items: center;
     justify-content: center;
     color: white;
-    font-size: 1.1rem;
 }
+
 
 .main-container {
     font-family: 'Roboto', sans-serif;
     width: 100%;
-    height: 84vh;
+    height: 80vh;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -38,7 +39,7 @@
     justify-content: center;
     margin-top: 1.2rem;
     width: 100%;
-    height: 70%;
+    height: 60vh;
     background: #2D343F;
     color: white;
     border-radius: 15px;
@@ -49,67 +50,65 @@
 }
 
 .btn-section {
-    margin-top: 1rem;
+    position: relative;
+    margin: 1rem;
     width: 100%;
-    height: 30%;
+    height: 20vh;
     display: flex;
     align-items: center;
-}
-
-.btn-container {
-    width: 100%;
-    display: flex;
     justify-content: space-between;
 }
 
-.btn-1, .btn-2, .btn-3, .btn-4 {
-    margin-right: 2rem;
-    border: transparent;
-    border-radius: 15px;
+.btn {
+    border: 3px dashed yellow;
+    border-radius: 50%;
+    width: 110px;
+    height: 110px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.btn-container .btn-4 {
-    margin-right: 0;
-}
-
-.btn-container .btn-1, .btn-container .btn-2 {
+.btn-1, .btn-2 {
     background-color: #82B540;
 }
 
-.btn-container .btn-3, .btn-container .btn-4 {
+.btn-3, .btn-4 {
     background-color: #0A83B5;
-}
-
-.top-btn, .bottom-btn {
-    display: flex;
-    justify-content: space-between;
-    width: 41%;
 }
 
 .icon {
     cursor: pointer;
-    width: 50%;
-    height: 50%;
+    width: 95%;
+    height: 95%;
     border-radius: 50%;
     background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: .5rem;
 }
 
-.icon svg {
-    width: 7em;
-    height: 7em;
+.icon i {
+    font-size: 3.5rem;
+}
+
+.btn-1 .icon {
+    transform: rotate(-50deg);
+}
+
+.btn-1 .icon i{
+    color: green;
+}
+.btn-2 .icon i,.btn-3 .icon i{
+    color: blue;
+}
+.btn-4 .icon i{
+    color:red;
 }
 
 .footer {
     position: absolute;
     bottom: 0;
-    margin-top: 1rem;
     width: 100%;
     height: 8vh;
     display: flex;
@@ -120,16 +119,9 @@
     font-size: 1.2rem;
 }
 
-@media only screen and (max-width:1280px) {
-    .top-btn, .bottom-btn{
-        width: 42%;
-    }
-}
-
-@media only screen and (max-width:1180px) {
-    .top-btn, .bottom-btn{
-        width: 44%; 
-    }
+.header h1,.footer h2{
+    font-size: 1.8rem;
+    letter-spacing: 1px;
 }
 
 @media only screen and (max-width:1024px) {
@@ -137,23 +129,20 @@
         height: 7vh;
         font-size: 1.5rem;
     }
-    .btn-container {
-        flex-direction: column;
-    }
-    .btn-container .btn-2 {
-        margin-right: 0;
-    }
-    .top-btn {
-        margin-bottom: 2rem;
-    }
-    .top-btn, .bottom-btn {
-        width: 100%;
-    }
 }
 
 @media only screen and (max-width:768px) {
     .header h1, .footer h2 {
         font-size: 1.4rem;
+    }
+}
+
+@media only screen and (max-width:560px) {
+    .header h1, .footer h2 {
+        font-size: 1.3rem;
+    }
+    .main-container {
+        padding: 0 1.5rem;
     }
     .vedio-section {
         height: 60%;
@@ -161,18 +150,28 @@
     .btn-section {
         height: 40%;
     }
-}
-
-@media only screen and (max-width:540px) {
-    .header h1, .footer h2 {
-        font-size: 1.4rem;
+    .btn-section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "btn1 btn2" "btn3 btn4";
+        column-gap: 20px;
+        row-gap: 20px;
     }
-    .icon svg {
-        width: 5.5em;
-        height: 5.5em;
+    .btn-1 {
+        grid-area: btn1;
     }
-    .main-container {
-        padding: 0 1.5rem;
+    .btn-2 {
+        position: absolute;
+        right: 0;
+        grid-area: btn2;
+    }
+    .btn-3 {
+        grid-area: btn3;
+    }
+    .btn-4 {
+        position: absolute;
+        right: 0;
+        grid-area: btn4;
     }
 }
 
@@ -180,17 +179,17 @@
     .header h1, .footer h2 {
         font-size: 1.2rem;
     }
-    .top-btn {
-        margin-bottom: 1rem;
-    }
     .vedio-section {
         margin-top: 1rem;
     }
 }
 
-@media only screen and (max-width:360px) {
-    .vedio-section, .btn-section {
-        height: 50%;
+@media only screen and (max-width:375px) {
+    .header, .footer {
+        height: 6vh;
+    }
+    .btn-section {
+        row-gap: 10px;
     }
 }
 
@@ -198,20 +197,10 @@
     .main-container {
         padding: 0 .8rem;
     }
-    .icon svg {
-        width: 5em;
-        height: 5em;
-    }
 }
 
 @media only screen and (max-width:280px) {
     .main-container {
         padding: 0 .6rem;
-    }
-    .vedio-section {
-        height: 55%;
-    }
-    .btn-section {
-        height: 45%;
     }
 }
