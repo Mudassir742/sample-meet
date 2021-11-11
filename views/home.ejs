@@ -29,22 +29,22 @@
             </div>
             <div class="btn-container">
                 <div class="btn-section">
-                    <button class="btn btn-1">
-                        <div class="icon">
+                    <button class="btn btn-1" id="btn1" onclick="handleClickForButtonOne()">
+                        <div class="icon" id="icon1">
                             <i class="fas fa-phone-volume"></i>
                         </div>
                     </button>
-                    <button class="btn btn-2">
+                    <button class="btn btn-2" id="btn2" onclick="handleClickForButtonTwo()">
                         <div class="icon">
                             <i class="fas fa-bell"></i>
                         </div>
                     </button>
-                    <button class="btn btn-3">
+                    <button class="btn btn-3" id="btn3" onclick="handleClickForButtonThree()">
                         <div class="icon">
                             <i class="fas fa-bell"></i>
                         </div>
                     </button>
-                    <button class="btn btn-4">
+                    <button class="btn btn-4" id="btn4" onclick="handleClickForButtonFour()">
                         <div class="icon">
                             <i class="fas fa-stop"></i>
                         </div>
@@ -57,6 +57,63 @@
             <h2>SCHOOL NAME</h2>
         </div>
     </div>
+
+    <script>
+        var isButtonOneCLicked = false
+        var isButtonTwoCLicked = false
+        var isButtonThreeCLicked = false
+        var isButtonFourCLicked = false
+
+        var btnOneParent = document.getElementById("btn1")
+        var btnTwoParent = document.getElementById("btn2")
+        var btnThreeParent = document.getElementById("btn3")
+        var btnFourParent = document.getElementById("btn4")
+
+        function handleClickForButtonOne() {
+            if (isButtonOneCLicked == false) {
+                btnOneParent.childNodes[1].style.backgroundColor = "#F46226"
+                isButtonOneCLicked = true
+            }
+            else {
+                btnOneParent.childNodes[1].style.backgroundColor = "#FFFFFF"
+                isButtonOneCLicked = false
+            }
+        }
+
+        function handleClickForButtonTwo() {
+            if (isButtonTwoCLicked == false) {
+                btnTwoParent.childNodes[1].style.backgroundColor = "#F46226"
+                isButtonTwoCLicked = true
+            }
+            else {
+                btnTwoParent.childNodes[1].style.backgroundColor = "#FFFFFF"
+                isButtonTwoCLicked = false
+            }
+        }
+
+        function handleClickForButtonThree() {
+            if (isButtonThreeCLicked == false) {
+                btnThreeParent.childNodes[1].style.backgroundColor = "#F46226"
+                isButtonThreeCLicked = true
+            }
+            else {
+                btnThreeParent.childNodes[1].style.backgroundColor = "#FFFFFF"
+                isButtonThreeCLicked = false
+            }
+        }
+
+        function handleClickForButtonFour() {
+            if (isButtonFourCLicked == false) {
+                btnFourParent.childNodes[1].style.backgroundColor = "#F46226"
+                isButtonFourCLicked = true
+            }
+            else {
+                btnFourParent.childNodes[1].style.backgroundColor = "#FFFFFF"
+                isButtonFourCLicked = false
+            }
+        }
+
+    </script>
 
 </body>
 
