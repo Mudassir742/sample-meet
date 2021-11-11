@@ -76,6 +76,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    outline:transparent;
+    text-decoration: none; 
+}
+
+.btn:active{
+    outline: none;
 }
 
 .btn-1, .btn-2 {
@@ -99,6 +105,7 @@
 
 .icon i {
     font-size: 3.5rem;
+    border-radius: 50%;
 }
 
 .btn-1 .icon {
@@ -160,10 +167,10 @@
         padding: 0 1.5rem;
     }
     .vedio-section{
-        height:56vh;
+        height:60%;
     }
     .btn-container{
-        height: 30vh;
+        height: 40%;
     }
     .btn-section {
         display: grid;
@@ -190,19 +197,13 @@
     }
 }
 
-@media only screen and (max-width:420px) {
+@media only screen and (max-width:480px) {
     .header h1, .footer h2 {
         font-size: 1.2rem;
     }
 
     .main-container {
         padding: 0 1.5rem;
-    }
-    .vedio-section{
-        height: 60%;
-    }
-    .btn-container{
-        height: 40%;
     }
 
     .btn{
