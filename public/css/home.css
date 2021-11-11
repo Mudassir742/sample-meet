@@ -190,9 +190,24 @@
     }
 }
 
-@media only screen and (max-width:411px) {
+@media only screen and (max-width:420px) {
     .header h1, .footer h2 {
         font-size: 1.2rem;
+    }
+
+    .main-container {
+        padding: 0 1.5rem;
+    }
+    .vedio-section{
+        height: 60%;
+    }
+    .btn-container{
+        height: 40%;
+    }
+
+    .btn{
+        width: 100px;
+        height: 100px;
     }
     
 }
@@ -207,8 +222,11 @@
     .main-container{
         height: 88vh;
     }
+    .vedio-section{
+        height: 55%;
+    }
     .btn-container{
-        height: 32vh;
+        height: 45%;
     }
 }
 
